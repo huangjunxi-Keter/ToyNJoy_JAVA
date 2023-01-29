@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.keter.toynjoy.dao.IProduct_TypeDao">
+
+    <select id="getAll" resultType="pers.keter.toynjoy.entity.Product_Type">
+        select * from Product_type
+    </select>
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.keter.toynjoy.dao.ILibraryDao">
+
+    <select id="getByProductIdAndUsername" resultType="pers.keter.toynjoy.entity.Library">
+        select * from Library where user_name = #{username} and product_id = #{productId}
+    </select>
+
+    <insert id="CreateLibraryByUsername">
+        insert into Library(user_name,product_id,join_time,last_time,total_hours) values(#{username},#{productId},#{date},#{date},0)
+    </insert>
+
+</mapper>

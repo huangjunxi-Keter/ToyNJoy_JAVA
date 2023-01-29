@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.keter.toynjoy.dao.IUser_InfoDao">
+
+    <select id="getInfoByUsername" parameterType="String" resultType="pers.keter.toynjoy.entity.User_Info">
+        select * from User_info where user_name = #{username}
+    </select>
+
+    <insert id="CreateUserInfo">
+        insert into User_info(user_name,signature,wrapper_image) values(#{name}, '这个人懒死了，什么都没写', #{wrapper_image})
+    </insert>
+
+</mapper>

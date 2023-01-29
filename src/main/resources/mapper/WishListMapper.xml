@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.keter.toynjoy.dao.IWishListDao">
+
+    <select id="getByProductIdAndUsername" resultType="pers.keter.toynjoy.entity.WishList">
+        select * from Wish_List where user_name = #{username} and product_id = #{productId}
+    </select>
+    
+    <delete id="DeleteByProductIdAndUsername">
+        delete from Wish_List where user_name = #{username} and product_id = #{productId}
+    </delete>
+
+</mapper>
